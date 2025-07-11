@@ -1,4 +1,4 @@
-package com.springmvc.Controller;
+package com.springmvc.controller;
 
 import com.springmvc.Entities.User;
 import com.springmvc.Service.UserService;

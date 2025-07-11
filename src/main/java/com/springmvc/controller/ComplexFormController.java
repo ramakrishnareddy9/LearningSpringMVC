@@ -1,4 +1,4 @@
-package com.springmvc.Controller;
+package com.springmvc.controller;
 
 import com.springmvc.Entities.ComplexForm;
 import org.springframework.stereotype.Controller;

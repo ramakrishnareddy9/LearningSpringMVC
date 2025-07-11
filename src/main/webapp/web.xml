@@ -1,3 +1,5 @@
+<!-- no need of this file delete if yo are having Config package else delete Config package and use this file-->
+
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee

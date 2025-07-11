@@ -1,15 +1,24 @@
-package com.springmvc.Controller;
+package com.springmvc.controller;
 
 import com.springmvc.UserException.IdNotFoundException;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
+
 import java.io.IOException;
 
-// this works for all the controllers in the project
-@ControllerAdvice
-public class ExcertionHandlingForEntireProject {
+@Controller
+public class ExceptionHandlingControllerInThisClass {
+
+    @RequestMapping("/main")
+    public String main() {
+        String str = null;
+        System.out.println( str.length());
+        System.out.println(10 / 0);
+        return "main";
+    }
     // single exception handler for all the exceptions
     @ExceptionHandler(value = NullPointerException.class)
     public String exception0() {
@@ -29,6 +38,6 @@ public class ExcertionHandlingForEntireProject {
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR) // this will send the response code 500 used while creating REST API
     @ExceptionHandler(value = Exception.class)
     public String exception() {
-        return "exception";
+       return "exception";
     }
 }
